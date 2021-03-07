@@ -1,0 +1,20 @@
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:shopping_list_flutter/models/task_data.dart';
+import 'package:shopping_list_flutter/screens/task_screen.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ChangeNotifierProvider(
+      create: (BuildContext context) => TaskData(),
+      child: MaterialApp(
+        title: 'ListBox',
+        debugShowCheckedModeBanner: false,
+        home: TasksScreen(),
+      ),
+    );
+  } 
+}
